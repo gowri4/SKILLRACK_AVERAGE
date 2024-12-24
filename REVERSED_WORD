@@ -1,0 +1,17 @@
+import java.util.Scanner;
+public class ReverseWords {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String inputString = scanner.nextLine();
+        // Split the input string into an array of words
+        String[] words = inputString.split("\\s+");
+        // Reverse the order of words in the array
+        String reversedString = "";
+        for (int i = words.length - 1; i >= 0; i--) {
+            reversedString += words[i] + " ";
+        }
+        // Remove the extra space at the end
+        reversedString = reversedString.trim();
+        System.out.println("Reversed string: " + reversedString);
+    }
+}
